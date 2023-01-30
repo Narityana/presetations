@@ -1,0 +1,119 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: var(--grey-light);
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+body button {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+
+
+.section { 
+padding-top: 60px;
+padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+    @media screen and (min-width: 480px)
+    {width: 480px;}
+
+    @media screen and (min-width: 768px)
+    {width: 768px;}
+
+    @media screen and (min-width: 1200px)
+    {width: 1200px;}
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.accent {
+    color: var(--blue);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+// .networks {
+
+//     display: flex;
+//     gap: 10px;
+
+//     &__link {
+//         display: flex;
+//         width: 44px;
+//         height: 44px;
+//         border-radius: 50%;
+//         background-color: rgba(255, 255, 255, 0.1);
+//         color: var(--white);
+//         align-items: center;
+//         justify-content: center;
+
+//         &:hover,
+//         &:focus {
+//             background-color: var(--blue);
+//             color: var(--white);
+//             transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+//         }
+//     }
+
+//     &__icon {
+//         display: flex;
+//         fill: currentColor;
+//     }
+// }

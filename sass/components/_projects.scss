@@ -1,0 +1,100 @@
+.projects {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+    display: flex;
+        @media screen and (min-width: 768px){
+            width: calc((100% - 30px) / 2); 
+        }
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 60px) / 3);
+        }
+    }
+
+    &__link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+            transition: box-shadow 250ms var(--cubic);
+        }
+    }
+    
+    &__thumb {
+        flex-grow: 1;
+        padding: 20px 24px;
+        border-bottom: 1px solid #ECECEC;
+        border-left: 1px solid #ECECEC;
+        border-right: 1px solid #ECECEC;
+    }
+
+    &__type {    
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.03em;
+        color:var(--grey-light);
+    }
+
+    &__title {
+        margin-bottom: 4px;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: var(--secondblack);
+    }
+
+    &__card {
+        position: relative;
+        overflow: hidden;
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+    &__overlay {
+        display: inline-block;
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(250, 197, 92, 0.9);
+        transform: translateY(101%);
+        transition: transform 250ms var(--cubic);
+        .projects__link:hover & {
+            transform: translateY(0);
+        }
+    }
+    
+    &__dscr {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px 24px;
+        font-size: 14px;
+        line-height: 1.555;
+        letter-spacing: 0.03em;
+        width: 100%;
+        height: 100%;
+        color: var(--white);
+        .projects__card:hover & {
+            opacity: 1;
+        }
+        @media screen and (min-width: 375px){
+            font-size: 16px;
+        }
+        @media screen and (min-width: 480px){
+            padding: 77px 24px;
+        }
+        @media screen and (min-width: 768px){
+            padding: 49px 24px 77px 24px;
+        }
+        @media screen and (min-width: 1200px){
+            padding: 63px 24px;
+        }
+    }
+}

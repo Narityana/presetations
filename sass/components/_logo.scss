@@ -1,0 +1,11 @@
+.header__logo {
+    @extend %logo;
+    display: flex;
+    max-width: 134px;
+    color: var(--black);
+}
+.footer__logo {
+    @extend %logo;
+    margin-bottom: 28px;
+    color: var(--white);
+}
